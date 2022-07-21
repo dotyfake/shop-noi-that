@@ -1,10 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 :root {
     --black: #333;
-    --white: #f4f4f4;
-    --primary: #c56e90;
-    --second: #949494;
+    --white: #fff;
+    --primary: #61bcd7;
+    --highlight: #d7618e;
+    --yellow: #d7a261;
+    --second: #3f3f3f;
+    --product-height: 370px;
+    --header-height: 100px;
+    --slider-height: 400px;
+    --wide: 1280px;
+    --padding-slide: 10px 40px;
+    --margin-top: 120px;
+    --padding-item-bottom: 30px;
+    --search-width: 400px;
+    --slider-image-height: 500px;
 }
 
 *,
@@ -16,7 +27,7 @@
 html {
     font-size: 62.5%;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -39,4 +50,48 @@ ul {
 li {
     padding: 0;
     list-style: none;
+}
+
+.tablet {
+    --padding-slide: 0;
+    --search-width: 280px;
+    --product-height: 240px;
+    --margin-top: 80px;
+    --header-height: 60px;
+    --padding-item-bottom: 10px;
+    --slider-image-height: 320px;
+}
+
+.swiper {
+    padding: var(--padding-slide);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border: solid var(--primary);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    z-index: 10;
+    -webkit-transform: rotate(-45deg);
+}
+
+.swiper-button-prev {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.wide {
+    width: var(--wide);
+    margin: 0 auto;
+}
+
+@media (max-width: 1280px) {
+    .wide {
+        width: 92vw;
+    }
 }

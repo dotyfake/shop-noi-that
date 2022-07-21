@@ -1,14 +1,16 @@
-import { Router, Route } from 'react-router-dom';
-import { Home, Products, Contact } from '~/pages';
-
+import { Routes, Route } from 'react-router-dom';
+import { Home, Products, Contact, NotFoundPage, ProductPage } from '~/pages';
+import { memo } from 'react';
 const Container = () => {
     return (
-        <Router>
-            <Route to="/" element={<Home />} />
-            <Route to="/products" element={<Products />} />
-            <Route to="/Contact" element={<Contact />} />
-        </Router>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/products" element={<Products />} />
+            <Route path="/Contact" element={<Contact />} />
+            <Route path="/ProductPage" element={<ProductPage />} />
+            <Route path="*" element={<NotFoundPage />} />
+        </Routes>
     );
 };
 
-export default Container;
+export default memo(Container);
