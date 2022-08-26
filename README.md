@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+## Thông tin dự án
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dự án là một webapp thương mại điện tử nội thất, giúp người dùng mua hàng trực tuyến và quản lý đơn hàng.
 
-## Available Scripts
+### Các chức năng chính của dự án:
 
-In the project directory, you can run:
+-   Tra cứu sản phẩm trên trang chủ.
+-   Tra cứu sản phẩm qua chức năng tìm kiếm.
+-   Lọc sản phẩm theo loại.
+-   ...
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Công nghệ sử dụng trong dự án
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Frontend
 
-### `npm test`
+-   Dự án được tạo từ CRA(create-react-app).
+-   Thư viện CSS sử dụng styled-components.
+-   Định tuyến của trang sử dụng react-router-dom.
+-   Lazyloading với react-lazy-load-image-component.
+-   SEO với thư viện react-helmet.
+-   Slide sử dụng thư viện swiper.
+-   Popper và tooltip sử dụng tippyjs.
+-   Icon sử dụng react-icons.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### State management
 
-### `npm run build`
+-   State management sử dụng redux.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-   Serverless nodejs runtime Netlify.
+-   API của trang được viết từ **function** của Netlify dựa trên Notion API.
+-   Database: Sử dụng Notion Database.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### CMS
 
-### `npm run eject`
+-   CMS: notion.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Cấu trúc thư mục trong dự án
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+shop-noi-that
+│   README.md
+│   netlify.toml (build settings, deploy settings, and environment variables)
+│   ...
+└───functions (Để viết code Node.js, trong dự án này chỉ dùng để viết API)
+└───src
+    └───assets (Chứa tài nguyên của trang web)
+    └───Commponents
+    └───layout
+    └───pages
+    └───hooks (custom hooks)
+    └───store (State management)
+    ...
+```
