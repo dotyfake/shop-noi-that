@@ -1,6 +1,6 @@
 ## Thông tin dự án
 
-Dự án là một webapp thương mại điện tử nội thất, giúp người dùng mua hàng trực tuyến và quản lý đơn hàng.
+Dự án là một webapp thương mại điện tử nội thất, giúp người dùng mua hàng trực tuyến.
 
 ### Các chức năng chính của dự án:
 
