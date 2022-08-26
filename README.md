@@ -16,7 +16,7 @@ Dự án là một webapp thương mại điện tử nội thất, giúp ngư�
 ### Frontend
 
 -   Dự án được tạo từ CRA(create-react-app).
--   Thư viện CSS sử dụng styled-components.
+-   Thư viện CSS sử dụng styled-components và thư viện NextUI.
 -   Định tuyến của trang sử dụng react-router-dom.
 -   Lazyloading với react-lazy-load-image-component.
 -   SEO với thư viện react-helmet.
